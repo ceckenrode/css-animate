@@ -1,0 +1,177 @@
+.spinner {
+  position: relative;
+  margin: 5px;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.spinner.loading {
+  opacity: 1;
+  transition: 1s ease-in-out all;
+  animation: rotate 2s cubic-bezier(0.465, 0.183, 0.153, 0.946) infinite;
+}
+
+.spinner .circle {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.spinner.loading .circle.c1 {
+  left: 80px;
+  top: 5px;
+  background: #4384F8;
+  animation: c1Center 4s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+}
+
+.spinner.loading .circle.c2 {
+  left: 5px;
+  top: 80px;
+  background: #34A855;
+  animation: c2Center 4s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+}
+
+.spinner.loading .circle.c3 {
+  left: 80px;
+  bottom: 5px;
+  background: #FBBD06;
+  animation: c3Center 4s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+}
+
+.spinner.loading .circle.c4 {
+  right: 5px;
+  top: 80px;
+  background: #EA4436;
+  animation: c4Center 4s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+}
+
+@keyframes rotate {
+  from {
+   transform: rotate(0deg); 
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes c1Center {
+  0% {
+    top: 5px;
+    background: #4384F8;
+  }
+  24% {
+    background: #4384F8;
+  }
+  24% {
+    background: #4384F8;
+  }
+  25% {
+    background: #FBBD06;
+    top: 80px;
+  }
+  50% {
+    background: #FBBD06;
+    top: 5px;
+  }
+  74% {
+    background: #FBBD06;
+  }
+  75% {
+    background: #4384F8;
+    top: 80px;
+  }
+  100% {
+    background: #4384F8;
+    top: 5px;
+  }
+}
+
+@keyframes c2Center {
+  0% {
+    background: #34A855;
+    left: 5px;
+  }
+  24% {
+    background: #34A855;
+  }
+  25% {
+    background: #EA4436;
+    left: 80px;
+  }
+  50% {
+    background: #EA4436;
+    left: 5px;
+  }
+  74% {
+    background: #EA4436;
+  }
+  75% {
+    background: #34A855;
+    left: 80px;
+  }
+  100% {
+    background: #34A855;
+    left: 5px;
+  }
+}
+
+@keyframes c3Center {
+  0% {
+    background: #FBBD06;
+    bottom: 5px;
+  }
+  24% {
+    background: #FBBD06;
+  }
+  25% {
+    background: #4384F8;
+    bottom: 80px;
+  }
+  50% {
+    background: #4384F8;
+    bottom: 5px;
+  }
+  74% {
+    background: #4384F8;
+  }
+  75% {
+    background: #FBBD06;
+    bottom: 80px;
+  }
+  100% {
+    background: #FBBD06;
+    bottom: 5px;
+  }
+}
+
+@keyframes c4Center {
+  0% {
+    background: #EA4436;
+    right: 5px;
+  }
+  24% {
+    background: #EA4436;
+  }
+  25% {
+    background: #34A855;
+    right: 80px;
+  }
+  50% {
+    background: #34A855;
+    right: 5px;
+  }
+  74% {
+    background: #34A855;
+  }
+  75% {
+    background: #EA4436;
+    right: 80px;
+  }
+  100% {
+    background: #EA4436;
+    right: 5px;
+  }
+}

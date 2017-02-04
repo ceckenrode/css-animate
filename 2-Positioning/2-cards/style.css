@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#card {
+  margin: 10px;
+  position: relative;
+  height: 250px;
+  width: 225px;
+  border: 2px solid #222;
+  background-image: url("https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg");
+  background-size: cover;
+}
+
+#caption {
+  background: deepskyblue;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  min-height: 20%;
+}
+
+#caption:hover {
+  background: red;
+  min-height: 92%;
+  transition: 1s all;
+}
+
+#caption > p.title, p.description {
+  text-align: center;
+  color: white;
+  font-size: 1.15em;
+}
+
+#caption > p.description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+}
+
+#caption:hover > p.description {
+  padding: 20px;
+  height: 50%;
+  opacity: 1;
+  transition: 1s all steps(120, start);
+  transition-delay: .5s;
+}
+
+#caption:hover > p.title {
+  opacity: 0;
+  transition: .5s all steps(120, start);
+  transition-delay: .5s;
+}

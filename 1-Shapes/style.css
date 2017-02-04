@@ -1,0 +1,27 @@
+#square,
+#circle {
+  height: 100px;
+  width: 100px;
+  background: blue;
+}
+
+#circle,
+#oval {
+  border-radius: 50%;
+  background: red;
+}
+
+#oval {
+  border-radius: 50%;
+  height: 100px;
+  width: 150px;
+  background: green;
+}
+
+#triangle {
+  width: 0px;
+  height: 0px;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 100px solid orange;
+}
